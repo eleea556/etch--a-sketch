@@ -16,3 +16,10 @@ let sideSize = 16;
 
 createSquareGrid(grid, sideSize);
 
+const cells = document.querySelectorAll(".cell");
+
+cells.forEach((cell) => {
+    cell.addEventListener('mouseenter', (e) => {
+        cell.style.backgroundColor = "black";
+    });
+});
