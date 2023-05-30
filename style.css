@@ -19,3 +19,7 @@
     flex:auto;
     flex-basis: var(--cell-size);
 }
+
+button {
+    margin-bottom: 15px;
+}
