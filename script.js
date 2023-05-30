@@ -6,6 +6,10 @@ function clearGrid(grid) {
     }
 }
 
+function getRandomInt(max) {
+    return Math.floor(Math.random() * max)
+}
+
 function createSquareGrid(grid, sideSize, gridSize = 508) {
     root.style.setProperty('--cell-size', gridSize/sideSize + "px");
     for (let i = 0; i < sideSize; i++) {
@@ -18,7 +22,7 @@ function createSquareGrid(grid, sideSize, gridSize = 508) {
     const cells = document.querySelectorAll(".cell");
     cells.forEach((cell) => {
         cell.addEventListener('mouseenter', (e) => {
-            cell.style.backgroundColor = "black";
+            cell.style.backgroundColor = "rgb(" + getRandomInt(255) + ',' + getRandomInt(255) + ',' + getRandomInt(255) + ')';
         });
     });
 }
