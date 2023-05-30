@@ -1,5 +1,14 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --cell-size: 31.75px;
+}
+
 .grid {
     width: 512px;
+    height: 512px;
     border: 2px solid black;
     display: flex;
     flex-wrap: wrap;
@@ -7,6 +16,6 @@
 
 .cell {
     border: 1px solid gray;
-    width: 30px;
-    height: 30px;
+    flex:auto;
+    flex-basis: var(--cell-size);
 }
